@@ -1,0 +1,15 @@
+<div class="container">
+  <hr />
+
+  <div class="row">
+    <div class="col-12">
+      <form [formGroup]="dynamicForm.formGroup" (ngSubmit)="onSubmit()">
+        <div viewMode="basic" [rxwebDynamicForm]="dynamicForm" [uiBindings]="uiBindings">
+        </div>
+        
+        <button [disabled]="!dynamicForm.formGroup.valid" type="submit" 
+        class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

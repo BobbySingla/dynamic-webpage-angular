@@ -1,0 +1,20 @@
+<div class="container">
+  <hr />
+
+  <div class="row">
+    <div class="col-12">
+      <form [formGroup]="dynamicForm.formGroup" (ngSubmit)="onSubmit($event)">
+        <div #abc viewMode="basic" [rxwebDynamicForm]="dynamicForm" [uiBindings]="uiBindings"  (change)="onSubmit($event)">
+        </div>
+        
+      
+<app-bank-component *ngIf= "value?.client==='BANK'"></app-bank-component>
+
+<app-college-component *ngIf= "value?.client==='COLLEGE'"></app-college-component>
+<app-schoolcomponent *ngIf= "value?.client==='SCHOOL'"></app-schoolcomponent>
+       
+      </form>
+      
+    </div>
+  </div>
+</div>
